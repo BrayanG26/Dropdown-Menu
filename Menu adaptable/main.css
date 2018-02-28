@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background: #FFFFFA;
+}
+
+header {
+	/*Para que abarque todo el documento*/
+	width:100%;
+}
+header nav {
+	/*siempre va a abarcar el 90% del ancho de la pantalla*/
+	width: 90%;
+	/*ancho maximo*/
+	max-width: 1000px;
+	/*margen arriba y abajo de 20px y hacia los lados sera automatico*/
+	margin: 20px auto;
+	background: #024959;
+}
+
+.menu-bar {
+	display: none;
+}
+
+header nav ul{
+	/*Quita el parrafo del lado del menu*/
+	overflow: hidden;
+	list-style: none;
+}
+
+header nav ul li {
+	/*se pone uno al lado del otro*/
+	float: left;
+}
+
+header nav ul li a {
+	color: #fff;
+	/*padding arriba y abajo*/
+	padding: 20px;
+	display: block;
+	text-decoration: none;
+}
+
+header nav ul li a:hover{
+	background: #037e8c;
+}
+
+header nav ul li span {
+	margin-right: 10px;
+}
+
+section{
+	/*padding hacia todos los lados*/
+	padding: 20px;
+}
+
+@media screen and (max-width: 800px){
+	header nav {
+		/*El menu abarcara 70% de ancho*/
+		width: 70%;
+		/*Y un 100% de alto en la pantalla*/
+		height: 100%;
+		margin: 0;
+		position: fixed;
+		left: -100%;
+	}
+	/*Acomodar los menus*/
+	header nav ul li {
+		/*Todos los elementos li abarcaran todo lo que puedan
+		de ancho*/
+		display: block;
+		float: none;
+		border-bottom:1px solid rgba(255,255,255,.3);
+	}
+
+	.menu-bar {
+		display:block;
+		width: 100%;
+		background: #ccc;
+	}
+
+	.menu-bar .bt-menu {
+		/*Para que abarque el 100%*/
+		display: block;
+		padding: 20px;
+		background: #024959;
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 25px;
+		-box-sizing: border-box;
+	}
+
+	.menu-bar span {
+		float: right;
+		font-size: 40px;
+	}
+}
